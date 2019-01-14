@@ -39,7 +39,10 @@ class App extends Component {
     const { guess, lives } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="form-group">
+        <div
+          className="form-group"
+          style={{ display: 'flex', flexDirection: 'column' }}>
+          <span>You have {lives} attempts left</span>
           <label className="form-label d-flex flex-column" htmlFor="guess">
             What's the magic number?
             <input
